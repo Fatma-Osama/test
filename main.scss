@@ -1,0 +1,119 @@
+@import "vari";
+@import "mixin";
+
+.navbar{
+    background-color: var(--dark-color);
+    .nav-link.active{
+            color: var(--green-color);
+            &:focus, &:hover{
+                color: white;
+            }
+    }
+   button{
+        border-color: white;
+        color: white;
+        font-size: 25px;
+    }
+
+}
+
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+    & a{
+        background-color: red;
+        border: transparent;
+        padding: 10px;
+    }
+}
+.features{
+    .main-title{
+        position: relative;
+        ::before{
+            content: "";
+            @include fore
+        }
+    }
+    .feat{
+        margin-top: 150px;
+        height: 300px;
+        h3{
+            color: yellowgreen
+        }
+    }
+}
+.our-work{
+    background-color: beige;
+    .main-title{
+        position: relative;
+        ::after{
+            content: "";
+            @include fore
+        }
+    }
+    ul{
+        li{
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+    }
+    .box{
+        padding: 5px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+}
+
+.stuff{
+    .main-title{position: relative;
+        ::after{
+            content: "";
+            @include fore
+        }
+    }
+    .description{width: 400px}
+    .photo{
+        img{
+            max-width: 100%;
+        }
+    }
+}
+.team{
+    background-color: beige;
+    h2{
+        color:yellowgreen;
+
+    }
+    h3{
+        background-color: var(--green-color);
+        color: white
+    }
+}
+.project{
+    background-color: var(--dark-color);
+
+}
+.subscribe{
+    background-color: yellowgreen;
+    input[type ="text"]{
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color: white
+        }
+        
+        border: none;
+        border-bottom: 1px solid white;
+        
+    }
+    input[type="submit"]{
+        background-color: var(--dark-color);
+        color: yellowgreen
+    }
+}
+.footer{
+    background-color: var(--dark-color);
+}

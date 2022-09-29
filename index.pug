@@ -1,0 +1,161 @@
+doctype
+html(lang='en')
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="x-UA-COMPATIBLE", CONTENT="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.8")
+        link(rel="stylesheet", href="css/bootstrap.min.css")
+        link(rel="stylesheet", href="css/bootstrap.css.map")
+        link(rel="stylesheet", href="css/bootstrap.css")
+        link(rel="stylesheet", href="css/bootstrap.min.css.map")
+        link(rel="stylesheet", href="/main.css")
+        include includes/mixin.pug
+        title bondi 
+    body
+    
+        <nav class="navbar navbar-expand-lg sticky-top">
+            .container
+                a(class="navbar-brand" href="#")
+                    img(src="/images/logo.png")
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+                    each link in ["services", "portfolio", "about", "contact"]
+                        li
+                            a(class="nav-link active p-2 p-lg-3" aria-current="page" href="#")= link
+                    //-for(var i=0 ; i < 4; i++)
+                        li.nav-item
+                    
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                .search.ps-3.pe-3.d-none.d-lg-block.text-secondary search
+                -var btun = "btn btn-primary main-btn rounded-pill m-auot fs-4"
+                a(class= btun "ms-auto") login
+
+
+                </div>
+            </div>
+        </nav>
+        .landing.d-flex.align-items-center.justify-content-center 
+            .text-center.text-light
+                h1.text-uppercase test the creativity
+                p we make awesome graphic and web design
+                a(class= btun) get started
+        .features.text-center.pt-5.pb-5
+            .container 
+                +head("we are good at", "some of these stuff under")
+                //.main-title.text-uppercase.mt-5.mb-5
+                        img(src="/images")
+                        h2 we are good at 
+                        p.text-black-50 some of these stuff under
+                .row
+                    - for (var i= 0; i<3 ; i++)
+                        div.col-md-6.col-lg-4
+                                .feat 
+                                    h1 #{i+1}
+                                    h3.mb-3.mt-5.text-uppercase graphic design
+                                    p.text-black-50.lh-lg Lorem ipsum dolor sit amet. Eos veniam excepturi iste sint sit libero sunt hic velit 
+                                      | ullam et e sunt! Sed quod
+        .our-work.pt-5.pb-5.text-center
+            .container
+                +head("we make this","prepare to be amazed")
+                ul.list-unstyled.d-flex.justify-content-center.mt-5.mb-5
+                    each elem in ["all", "design", "code", "photo"]
+                        li=elem
+                .row.pb-5
+                    - for (var j = 0; j < 8 ; j++)
+                        div.col-sm-6.col-md-4.col-lg-3.mb-3
+                            box.mb-5.bg-white
+                                img(src="/images/experiment-01.png", alt="photo" ,class="img-fluid")
+                a(class= btun) i want more    
+        .stuff.pb-5
+            .container
+                +head("some stuff about us","the great team")
+                p.description.text-center.mb-5.text-black-50.m-auto Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    | labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                .row.mt-5.align-items-center
+                    .col-lg-4.mb-4.text-center.text.md-start elzero
+                        .text
+                            h4 retina design
+                            p.text-black-50.fs-6 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim ad minim venia
+                            p.text-black-50.fs-6.text-black-50.fs-6 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enim ad minim veniam
+                            a(class= btun mt-3) order me one 
+                    .col-lg-8
+                        .photo.text-center.mt-3
+                            img(src="/images/news-03.png", class="img-fluide m-auto")
+        .team.text-center.pb-5.pt-5
+            .container
+                +head("Meet The Team","Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.")
+                .row 
+                    - for (var n = 0; n< 4 ; n++)
+                        div.col-md-6.col-lg-3
+                            .item.bg-white
+                                img(src="/images/team-4.png" alt="", class="img-fluid")
+                                h3.p-3.text-light Luke Skywalker
+                                blockquote.text-black-50.p-3 idon't understand how we got by those troops. I thought we were dead.
+        .teches.pt-5.pb-5.text-center
+            .container  
+                .row.align-items-center
+                    - for (var f = 0; f < 6 ; f++)
+                        div.col-sm-6.col-md-4.col-lg-2.mt-3.mb-3
+                            img(src="/images/tech-2.png" class="img-fluid")
+        .project.text-center.pb-5.pt-5.text-light
+            h2 start your project
+            p.text-white-50 Leave your description and we start the engine.Don't worry,you can cancel anytime
+            a(class= btun) start project
+        .blog.pt-5.pb-5.text-center
+            .container
+                +head("Read Our Blog","NEW STORIES")
+                .row.pb-5.pt-5
+                    -for (var a = 0; a < 3 ; a++)
+                        .col-md-6.col-lg-4
+                            .card
+                                <img src="/images/blog-1.jpg" class="card-img-top" alt="blog">
+                                .card-body
+                                    span.text-black-50 Jan 17, 2022
+                                    h5.card-title.text-uppercase some awesome blog title here
+                a(class= btun) more stories
+        .subscribe.pt-5.pb-5.text-center.text-md-start
+            .container
+                form.row.align-items-center
+                    .col-md-6.col-lg-3
+                        .fw-bold.fs-5.mb-3 Subscribe to our Newsletter:
+                    .col-md-6.col-lg-7.mb-5
+                        input(type="text" placeholder="ENTER EMAIL ADRESS" class="w-100 text-light bg-transparent p-2")    
+                    .col-md-6.col-lg-2
+                        input(type="submit", value="subscribe" class="btn rounded-pill")
+        .footer.pt-5.pb-5.text-md-start.text-white-50
+            .container
+                .row
+                    .col-md-6.col-lg-4
+                        .info
+                            img(src="/images/logo.png" class="mb-4")
+                            p.mb-5 Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
+                                |lacinia eget consectetur sed, convallis at tellus.
+                            p created by 
+                                span.fw-bold Graphberry
+                                |© 2022 - Bondi Inc
+                    - for (var l =0 ; l < 2; l++)
+                        div.col-md-6.col-lg-2
+                            .links
+                                h5.text-light links
+                                ul.list-unstyled.lh-lg
+                                    each home in["home","Our Services", "Portfolio", "Testimonials","Support","Terms and Condition"]
+                                        li=home
+                    .col-md-6.col-lg-4
+                        .contact
+                            h5.text-light contact us
+                            p.lh-lg.mt-3.mb-5
+                            a(class= btun) Graphberry@gmail.com
+        script(src="js/bootstrap.bundle.min.js")
+        script(src="js/bootstrap.bundle.min.js.map")
+
+
+
+        
+    
+
+
+
+

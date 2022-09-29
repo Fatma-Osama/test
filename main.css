@@ -1,0 +1,139 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+}
+
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .nav-link.active {
+  color: var(--green-color);
+}
+.navbar .nav-link.active:focus, .navbar .nav-link.active:hover {
+  color: white;
+}
+.navbar button {
+  border-color: white;
+  color: white;
+  font-size: 25px;
+}
+
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+.landing a {
+  background-color: red;
+  border: transparent;
+  padding: 10px;
+}
+
+.features .main-title {
+  position: relative;
+}
+.features .main-title ::before {
+  content: "";
+  width: 120px;
+  background-color: green;
+  height: 3px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.features .feat {
+  margin-top: 150px;
+  height: 300px;
+}
+.features .feat h3 {
+  color: yellowgreen;
+}
+
+.our-work {
+  background-color: beige;
+}
+.our-work .main-title {
+  position: relative;
+}
+.our-work .main-title ::after {
+  content: "";
+  width: 120px;
+  background-color: green;
+  height: 3px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.stuff .main-title {
+  position: relative;
+}
+.stuff .main-title ::after {
+  content: "";
+  width: 120px;
+  background-color: green;
+  height: 3px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.stuff .description {
+  width: 400px;
+}
+.stuff .photo img {
+  max-width: 100%;
+}
+
+.team {
+  background-color: beige;
+}
+.team h2 {
+  color: yellowgreen;
+}
+.team h3 {
+  background-color: var(--green-color);
+  color: white;
+}
+
+.project {
+  background-color: var(--dark-color);
+}
+
+.subscribe {
+  background-color: yellowgreen;
+}
+.subscribe input[type=text] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type=text]:focus {
+  outline: none;
+}
+.subscribe input[type=text]::-moz-placeholder {
+  color: white;
+}
+.subscribe input[type=text]:-ms-input-placeholder {
+  color: white;
+}
+.subscribe input[type=text]::placeholder {
+  color: white;
+}
+.subscribe input[type=submit] {
+  background-color: var(--dark-color);
+  color: yellowgreen;
+}
+
+.footer {
+  background-color: var(--dark-color);
+}/*# sourceMappingURL=main.css.map */
